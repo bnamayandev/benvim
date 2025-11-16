@@ -9,8 +9,8 @@ opt.termguicolors = true
 opt.mouse = "a"
 opt.clipboard = "unnamedplus"
 
-opt.tabstop = 4
-opt.shiftwidth = 4
+opt.tabstop = 3
+opt.shiftwidth = 3
 opt.expandtab = true
 opt.smartindent = true
 

@@ -11,7 +11,6 @@ return {
 			enabled = true, -- replaces noice (for notifications)
 			timeout = 3000,
 		},
-
 		-- optional nice QoL bits
 		quickfile = { enabled = true },
 		indent = { enabled = true },
@@ -22,9 +21,8 @@ return {
 
 	keys = {
 		---------------------------------------------------------------------------
-		-- Pickers (Telescope replacements)
+		-- Pickers
 		---------------------------------------------------------------------------
-		-- was: <leader><leader> -> telescope find_files
 		{
 			"<leader><leader>",
 			function()
@@ -32,8 +30,6 @@ return {
 			end,
 			desc = "Find Files (Snacks)",
 		},
-
-		-- was: <leader>fg -> telescope live_grep
 		{
 			"<leader>sg",
 			function()
@@ -41,8 +37,6 @@ return {
 			end,
 			desc = "Live Grep (Snacks)",
 		},
-
-		-- was: <leader>fb -> telescope buffers
 		{
 			"<leader>fb",
 			function()
@@ -50,8 +44,6 @@ return {
 			end,
 			desc = "Buffers (Snacks)",
 		},
-
-		-- was: <leader>fh -> telescope help_tags
 		{
 			"<leader>fh",
 			function()
