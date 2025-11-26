@@ -4,16 +4,27 @@ return {
 		"nvim-tree/nvim-web-devicons",
 	},
 	config = function()
-		require("oil").setup({
+		local oil = require("oil")
+
+		oil.setup({
 			default_file_explorer = true,
 			view_options = {
 				show_hidden = true,
 			},
 		})
 
-		-- Open Oil in the current window
-		vim.keymap.set("n", "<leader>e", "<cmd>Oil<CR>", {
-			desc = "Open Oil file explorer",
+		-- Open Oil and automatically enable preview
+		vim.keymap.set("n", "<leader>e", function()
+			oil.open()
+			-- Wait until Oil has finished setting up, then trigger preview
+			vim.schedule(function()
+				local ok, actions = pcall(require, "oil.actions")
+				if ok and actions.preview then
+					actions.preview.callback()
+				end
+			end)
+		end, {
+			desc = "Open Oil with preview",
 			silent = true,
 		})
 	end,
