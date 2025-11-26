@@ -15,7 +15,7 @@ return {
 			end
 		end
 
-		vim.keymap.set({ "n", "t" }, "<C-_>", toggle_term_with_count, {
+		vim.keymap.set({ "n", "t" }, "<leader>tt", toggle_term_with_count, {
 			desc = "Toggle terminal (with count)",
 		})
 	end,

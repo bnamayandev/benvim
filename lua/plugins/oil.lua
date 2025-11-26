@@ -1,13 +1,13 @@
 return {
 	"stevearc/oil.nvim",
 	dependencies = {
-		"nvim-tree/nvim-web-devicons", -- optional but nice for icons
+		"nvim-tree/nvim-web-devicons",
 	},
 	config = function()
 		require("oil").setup({
-			default_file_explorer = true, -- replace netrw
+			default_file_explorer = true,
 			view_options = {
-				show_hidden = true, -- show dotfiles
+				show_hidden = true,
 			},
 		})
 
