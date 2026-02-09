@@ -16,13 +16,7 @@ return {
 		-- Open Oil and automatically enable preview
 		vim.keymap.set("n", "<leader>e", function()
 			oil.open()
-			-- Wait until Oil has finished setting up, then trigger preview
-			vim.schedule(function()
-				local ok, actions = pcall(require, "oil.actions")
-				if ok and actions.preview then
-					actions.preview.callback()
-				end
-			end)
+
 		end, {
 			desc = "Open Oil with preview",
 			silent = true,
