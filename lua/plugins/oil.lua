@@ -13,12 +13,10 @@ return {
 			},
 		})
 
-		-- Open Oil and automatically enable preview
 		vim.keymap.set("n", "<leader>e", function()
 			oil.open()
-
 		end, {
-			desc = "Open Oil with preview",
+			desc = "Open Oil",
 			silent = true,
 		})
 	end,
