@@ -1,4 +1,5 @@
 vim.keymap.set("n", "<leader>gv", ":vsplit<CR>", { desc = "Vertical split" })
+vim.keymap.set("n", "<leader>gh", ":split<CR>", { desc = "Horizontal split" })
 
 local term_buf = nil
 local term_win = nil
