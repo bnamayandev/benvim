@@ -3,7 +3,6 @@ return {
 	event = "VeryLazy",
 	opts = {},
 	keys = {
-		-- press `s` to jump
 		{
 			"s",
 			mode = { "n", "x", "o" },
@@ -12,7 +11,6 @@ return {
 			end,
 			desc = "Flash Jump",
 		},
-		-- search in treesitter syntax nodes
 		{
 			"S",
 			mode = { "n", "x", "o" },
@@ -21,7 +19,6 @@ return {
 			end,
 			desc = "Flash Treesitter",
 		},
-		-- remote flash
 		{
 			"r",
 			mode = "o",
