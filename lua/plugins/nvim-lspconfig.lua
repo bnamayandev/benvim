@@ -9,7 +9,7 @@ return {
 				vim.keymap.set("n", lhs, rhs, { buffer = bufnr, desc = desc })
 			end
 
-			map("gd", vim.lsp.buf.definition, "Goto definition")
+			map("gd", function() Snacks.picker.lsp_definitions() end, "Goto definition")
 			map("K", vim.lsp.buf.hover, "Hover")
 			map("gr", vim.lsp.buf.references, "References")
 			map("<leader>rn", vim.lsp.buf.rename, "Rename")
