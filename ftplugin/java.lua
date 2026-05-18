@@ -57,6 +57,7 @@ local on_attach = function(_, bufnr)
   end
 
   map("gd", function() Snacks.picker.lsp_definitions() end)
+  map("K", vim.lsp.buf.hover)
   map("<leader>ca", vim.lsp.buf.code_action)
 
   -- JAVA-SPECIFIC

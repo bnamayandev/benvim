@@ -11,6 +11,8 @@ return {
 			"clangd",
 			"rust_analyzer",
 			"omnisharp",
+			"gopls",
+			"ts_ls",
 		},
 		automatic_installation = true,
 	},
