@@ -17,7 +17,7 @@ return {
 			typescriptreact = { "prettier" },
 		},
 		default_format_opts = {
-			lsp_fallback = true,
+			lsp_format = "fallback",
 		},
 	},
 }

@@ -16,3 +16,5 @@ opt.smartindent = true
 
 opt.splitright = true
 opt.splitbelow = true
+
+opt.autoread = true
