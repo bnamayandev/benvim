@@ -19,5 +19,18 @@ return {
 			capabilities = capabilities,
 			on_attach = on_attach,
 		})
+
+		-- Make `gd` navigate to actual library source instead of stub (.pyi) files
+		vim.lsp.config("pyright", {
+			settings = {
+				python = {
+					analysis = {
+						useLibraryCodeForTypes = true,
+						autoSearchPaths = true,
+						diagnosticMode = "openFilesOnly",
+					},
+				},
+			},
+		})
 	end,
 }
