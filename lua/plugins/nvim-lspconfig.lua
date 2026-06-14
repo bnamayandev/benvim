@@ -4,7 +4,9 @@ return {
 	config = function()
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-		local on_attach = function(_, bufnr)
+		local on_attach = function(client, bufnr)
+			client.server_capabilities.semanticTokensProvider = nil
+
 			local map = function(lhs, rhs, desc)
 				vim.keymap.set("n", lhs, rhs, { buffer = bufnr, desc = desc })
 			end
