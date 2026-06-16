@@ -5,13 +5,12 @@ return {
 
 	---@type snacks.Config
 	opts = {
-		-- enable the pieces that replace what you removed
-		picker = { enabled = true }, -- replaces telescope
+		picker = { enabled = true },
 		notifier = {
-			enabled = true, -- replaces noice (for notifications)
+			enabled = true,
 			timeout = 3000,
 		},
-		-- optional nice QoL bits
+		image = { enabled = true },
 		quickfile = { enabled = true },
 		indent = { enabled = true },
 		scroll = { enabled = true },
@@ -20,9 +19,6 @@ return {
 	},
 
 	keys = {
-		---------------------------------------------------------------------------
-		-- Pickers
-		---------------------------------------------------------------------------
 		{
 			"<leader><leader>",
 			function()
@@ -51,9 +47,6 @@ return {
 			end,
 			desc = "Help Tags (Snacks)",
 		},
-		---------------------------------------------------------------------------
-		-- Notifigations
-		---------------------------------------------------------------------------
 		{
 			"<leader>n",
 			function()
