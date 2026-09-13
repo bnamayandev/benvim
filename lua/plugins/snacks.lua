@@ -5,7 +5,18 @@ return {
 
 	---@type snacks.Config
 	opts = {
-		picker = { enabled = true },
+		picker = {
+			enabled = true,
+			matcher = {
+				smartcase = false,
+				ignorecase = true,
+			},
+			sources = {
+				grep = { args = { "-i" } },
+				grep_buffers = { args = { "-i" } },
+				grep_word = { args = { "--word-regexp", "-i" } },
+			},
+		},
 		notifier = {
 			enabled = true,
 			timeout = 3000,

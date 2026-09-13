@@ -17,4 +17,7 @@ opt.smartindent = true
 opt.splitright = true
 opt.splitbelow = true
 
+opt.ignorecase = true
+opt.smartcase = false
+
 opt.autoread = true

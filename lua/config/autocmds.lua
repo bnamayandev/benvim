@@ -20,6 +20,16 @@ timer:start(1000, 1000, vim.schedule_wrap(function()
   end
 end))
 
+vim.api.nvim_create_autocmd("SwapExists", {
+  pattern = "*",
+  callback = function()
+    local info = vim.fn.swapinfo(vim.v.swapname)
+    local pid = info.pid
+    local alive = pid and pid > 0 and vim.uv.fs_stat("/proc/" .. pid) ~= nil
+    vim.v.swapchoice = alive and "o" or "d"
+  end,
+})
+
 local brave_group = vim.api.nvim_create_augroup("open_images_in_brave", { clear = true })
 local image_exts = { "png", "jpg", "jpeg", "gif", "bmp", "webp", "tiff", "tif", "ico", "avif", "heic", "jxl" }
 local image_patterns = {}
