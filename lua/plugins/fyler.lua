@@ -9,6 +9,11 @@ return {
 		fyler.setup({
 			use_as_default_explorer = true,
 			kind = "split_left_most",
+			ui = {
+				hidden_items = {
+					switches = {},
+				},
+			},
 			integrations = {
 				icon = "nvim_web_devicons",
 			},
