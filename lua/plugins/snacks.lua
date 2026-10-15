@@ -12,9 +12,10 @@ return {
 				ignorecase = true,
 			},
 			sources = {
-				grep = { args = { "-i" } },
+				files = { hidden = true },
+				grep = { hidden = true, args = { "-i" } },
 				grep_buffers = { args = { "-i" } },
-				grep_word = { args = { "--word-regexp", "-i" } },
+				grep_word = { hidden = true, args = { "--word-regexp", "-i" } },
 			},
 		},
 		notifier = {
